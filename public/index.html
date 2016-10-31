@@ -1,32 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FCC mini timestamp service</title>
+	<style>
+		html {
+			font-family: monospace;
+		}
+		.container {
+			/*background-color: pink;*/
+			margin-left: 20vw;
+		}
+		.cont {
+			width: 60vw;		
+		}
+		li {
+			font-size: 15px;
+		}
+		a {
+			text-decoration: none;
+			color:orangered;
+		}
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Timestamp microservice</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1 class="header">
-                API Basejump: Timestamp microservice
-            </h1>
-            <blockquote>
-                User stories:
-                <ul>1) I can pass a string as a parameter, and it will check to see whether that string 
-                contains either a unix timestamp or a natural language date (example: January 1, 2016)</ul>
-                <ul>2) If it does, it returns both the Unix timestamp and the natural language form of that date.</ul>
-                <ul>3) If it does not contain a date or Unix timestamp, it returns null for those properties.</ul>
-            </blockquote>
-            <h3>Example usage:</h3>
-            <code>https://timestamp-ms.herokuapp.com/December%2015,%202015</code><br>
-            <code>https://timestamp-ms.herokuapp.com/1450137600</code>
-            <h3>Example output:</h3>
-            <code>
-                {
-                  "unix": 1450137600,
-                  "natural": "December 15, 2015"
-                }
-            </code>
-        </div>
-    </body>
+		p {
+			color: orangered;
+		}
+
+		blockquote {
+		  background: #f9f9f9;
+		  border-left: 10px solid #ccc;
+		  margin: 1.5em 10px;
+		  padding: 0.5em 10px;
+		  quotes: "\201C""\201D""\2018""\2019";
+		}
+		blockquote:before {
+		  color: #ccc;
+		  content: open-quote;
+		  font-size: 4em;
+		  line-height: 0.1em;
+		  margin-right: 0.25em;
+		  vertical-align: -0.4em;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="cont">
+	<h1>F.C.C timestamp miniservice</h1>
+	<blockquote>
+	<h2>User stories:</h2>
+	<ol>
+		<li>
+			I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)
+		</li>
+		<li>
+			If it does, it returns both the Unix timestamp and the natural language form of that date.
+		</li>
+		<li>
+			If it does not contain a date or Unix timestamp, it returns null for those properties.
+		</li>
+	</ol>		
+	</blockquote>
+	<h2>Usage</h2>
+	<p><a href="https://api-project-gangzhao.c9users.io/December%2015,%202015">https://api-project-gangzhao.c9users.io/December%2015,%202015</a></p>
+	<p><a href="https://api-project-gangzhao.c9users.io/1450137600">https://api-project-gangzhao.c9users.io/1450137600</a></p>
+	<h2>Output</h2>
+	<p>{"unix":"1450137600","natural":"December 16, 2015"}</p>
+	</div>
+
+
+	
+</div>
+</body>
 </html>
