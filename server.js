@@ -1,8 +1,8 @@
 var path = require('path');
 var express = require('express');
 var app = express();
-var MONTH = ['January','February','March','April','May','June','July',
-                  'August','September','October','November','December'];
+var MONTH = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+var port = process.env.PORT || 8080
 
 app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname+'/public/index.html'));
@@ -32,6 +32,6 @@ app.get('/:str', function (req, res) {
 	}
 });
 
-app.listen(8080, function () {
+app.listen(port, function () {
   console.log('Example app listening on port 8080!');
 });
